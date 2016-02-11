@@ -63,15 +63,15 @@ export default class App extends Component {
   }
 
   render() {
-    const filter = this.props.params.filter || "ALL";
+    const filter = (this.props.params.filter || "ALL").toUpperCase();
     return (
         <div>
           <ToolBar onAddTodo={this.addTodo.bind(this)}></ToolBar>
-          <TodoList todos={this.state.todos} filter={filter.toUpperCase()}
+          <TodoList todos={this.state.todos} filter={filter}
                     onToggleTodo={this.toggleTodo.bind(this)}>
 
           </TodoList>
-          <Footer></Footer>
+          <Footer filter={filter}></Footer>
         </div>
     );
   }
