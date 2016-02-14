@@ -9,19 +9,12 @@ import './css/styles.css';
 
 
 const socket = io(`${location.protocol}//${location.hostname}:8090`);
-const todos = [
-
-];
-let todoIndex = todos.length + 1;;
-
-
-
 
 export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      todos
+      todos: []
     };
 
     todoIndex = this.state.todos.length;
