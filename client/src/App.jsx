@@ -8,7 +8,8 @@ import './css/reset.css';
 import './css/styles.css';
 
 
-const socket = io(`${location.protocol}//${location.hostname}:8090`);
+//const socket = io('http://hi-react-server.herokuapp.com/');
+const socket = io('http://localhost:8000');
 
 export default class App extends Component {
   constructor(props) {
@@ -16,8 +17,6 @@ export default class App extends Component {
     this.state = {
       todos: []
     };
-
-    todoIndex = this.state.todos.length;
     socket.on('state', state => this.setState(state));
 
   }
