@@ -3,7 +3,7 @@ Get the code
 ```bash
 git clone https://github.com/mflodin/hi-react.git
 
-// to get a clean starting point for day-two use
+# to get a clean starting point for day-two use
 git clone -b day-two https://github.com/mflodin/hi-react.git
 ```
 
